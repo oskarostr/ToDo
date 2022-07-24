@@ -1,0 +1,155 @@
+$dark-color: #2C3333;
+$light-color: #E7F6F2;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.completed {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.todo {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark-color;
+    color: $light-color;
+
+    .header {
+        h1 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .todo-input {
+            padding: .5rem .5rem;
+            border-radius: 10px;
+            border: solid 1px $light-color;
+            background-color: $dark-color;
+            color: $light-color;
+        }
+
+        .btn-add {
+            margin-left: .5rem;
+            padding: .5rem 1rem;
+            background-color: $dark-color;
+            color: $light-color;
+            border: solid 1px $light-color;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        .btn-add:hover {
+            background-color: $light-color;
+            color: $dark-color;
+        }
+    }
+    
+    .todolist {
+        width: 500px;
+
+        h3 {
+            margin-top: 1rem;
+        }
+
+        .error-info {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        ul {
+            li {
+                padding: 0.5rem 1rem;
+                display: flex;
+                background-color: $dark-color;
+                margin: 1rem 0;
+                border: solid 1px $light-color;
+                border-radius: 10px;
+                transition: all .3s ease;
+
+                .tools {
+                    margin-left: auto;
+
+                    button {
+                        margin: 0 10px;
+                        background-color: $dark-color;
+                        border: none;
+                        color: $light-color;
+                        cursor: pointer;
+                        transition: all .3s ease;
+                    }
+                }
+            }
+
+            li:hover {
+                background-color: $light-color;
+                color: $dark-color;
+
+                button {
+                    background-color: $light-color;
+                    color: $dark-color;
+                }
+            }
+        }
+    }
+}
+
+.popup {
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    color: $light-color;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        text-align: center;
+    }
+
+    .popup-body {
+        margin-top: .5rem;
+        padding: .5rem 1rem;
+
+        .popup-info {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .popup-input {
+            padding: .5rem 1rem;
+            background-color: $dark-color;
+            color: $light-color;
+            border: solid 1px $light-color;
+            border-radius: 10px;
+        }
+
+        .popup-btn {
+            margin-left: 1rem;
+            padding: .5rem 1rem;
+            background-color: $dark-color;
+            color: $light-color;
+            border: solid 1px $light-color;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        .popup-btn:hover {
+            background-color: $light-color;
+            color: $dark-color;
+        }
+    }
+}
